@@ -1,0 +1,51 @@
+.mainBar {
+  font-family: "Kanit", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: white;
+}
+.mainBar .menuBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+.mainBar .mainTitle {
+  font-size: 15px;
+}
+.mainBar .searchBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.switchBar {
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 10px;
+  padding-bottom: 0;
+  position: fixed;
+  top: 40px;
+  width: 100%;
+  z-index: 1;
+  background-color: white;
+}
+.switchBar button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 5px 15px;
+}
+.switchBar button:nth-child(1) {
+  border-bottom: 4px solid rgb(255, 217, 25);
+}/*# sourceMappingURL=header.component.css.map */

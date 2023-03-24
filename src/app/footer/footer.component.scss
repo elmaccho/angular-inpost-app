@@ -1,0 +1,48 @@
+div{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  height: 7vh;
+
+  button{
+    border:none;
+    background-color: transparent;
+    cursor: pointer;
+
+    font-weight: 600;
+    font-size: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    span{
+      position: relative;
+    top: 3px;
+    }
+
+    i{
+      font-size: 17px;
+    }
+
+    .fa-arrow-right{
+      transform: rotateZ(-45deg);
+    }
+    .fa-arrow-left{
+      transform: rotateZ(-45deg);
+    }
+  }
+
+
+.slider{
+  width: 100%;
+  height: 80px;
+  background-color:rgb(255, 217, 25);
+
+
+  background-size:cover;
+  background-position:50%;
+}
+
+}
