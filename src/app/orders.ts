@@ -1,5 +1,5 @@
 export interface Orders {
-  order_number: number
+  tracking_number: number
   status: string
   sender: string
 }

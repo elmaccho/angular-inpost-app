@@ -4,37 +4,47 @@
 
   </div>
 
-  <div class="packageBox">
+<ng-container *ngIf="Orderlist.length > 0; else noOrders" >
+      <ng-container *ngFor="let tracknumber of Orderlist">
+        <div class="packageBox">
+            <div class="packageInfo">
+                <div class="trackingNumber">
+                  <p>nr przesyłki</p>
+                  <span>
+                    {{tracknumber.tracking_number}}
+                  </span>
+                </div>
 
-    <div class="packageInfo">
+                <div class="status">
+                  <p>status</p>
+                  <span>{{tracknumber.status}}</span>
+                </div>
 
-      <div class="trackingNumber">
-        <p>nr przesyłki</p>
-        <span>
-          2163871263871263102390123213
-        </span>
-      </div>
+                <div class="sender">
+                  <p>nadawca</p>
+                  <span>{{tracknumber.sender}}</span>
+                </div>
+            </div>
 
-      <div class="status">
-        <p>status</p>
-        <span>Wydana do doręczenia</span>
-      </div>
+          <button class="moreBtn">
+            <p>więcej</p> <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+    </ng-container>
+</ng-container>
 
-      <div class="sender">
-        <p>nadawca</p>
-        <span>KFD Sp. z o. o.</span>
-      </div>
-
-    </div>
-
-    <button class="moreBtn">
-      <p>więcej</p> <i class="fa-solid fa-arrow-right"></i>
-    </button>
-
-  </div>
 
   <button class="addReceiveBtn">
     <i class="fa-solid fa-plus"></i>
   </button>
+
+  <ng-template #noOrders >
+    <div class="infoBox">
+      <h1>Nie śledzisz jeszcze żadnej przesyłki</h1>
+
+      <span>Kliknij <i class="fa-solid fa-plus"></i> by dodać przesyłkę</span>
+    </div>
+  </ng-template>
+
 
 </div>
