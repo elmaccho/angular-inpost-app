@@ -1,0 +1,16 @@
+<header class="header">
+  <button><i class="fa-solid fa-arrow-left"></i></button> <h1>Dodaj przesyłkę</h1>
+</header>
+<main>
+  <h1>Podaj numer przesyłki, którą chcesz śledzić</h1>
+  <input type="text" placeholder="Numer przesyłki" (input)="test($event)">
+    <div class="counter-number">{{text}}/24 znaków</div>
+
+
+  <h1>Możesz również nadać tej przesyłce nazwę</h1>
+  <input type="text" placeholder="Nazwa przesyłki">
+  <div class="counter-name">0/20 znaków</div>
+
+
+  <button>Dodaj</button>
+</main>
