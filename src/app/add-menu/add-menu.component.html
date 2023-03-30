@@ -1,15 +1,15 @@
 <header class="header">
-  <button><i class="fa-solid fa-arrow-left"></i></button> <h1>Dodaj przesyłkę</h1>
+  <button (click)="closeAddMenu()"><i class="fa-solid fa-arrow-left"></i></button> <h1>Dodaj przesyłkę</h1>
 </header>
-<main>
+<main class="main">
   <h1>Podaj numer przesyłki, którą chcesz śledzić</h1>
-  <input type="text" placeholder="Numer przesyłki" (input)="test($event)">
-    <div class="counter-number">{{text}}/24 znaków</div>
+  <input type="tel" placeholder="Numer przesyłki" (focusin)="focusIn($event)" (focusout)="focusOut($event)" (input)="packageNumber($event)" maxlength="24" minlength="0">
+    <div class="counter-number">{{packageNumberText}}/24 znaków</div>
 
 
   <h1>Możesz również nadać tej przesyłce nazwę</h1>
-  <input type="text" placeholder="Nazwa przesyłki">
-  <div class="counter-name">0/20 znaków</div>
+  <input type="text" placeholder="Nazwa przesyłki" (focusin)="focusIn($event)" (focusout)="focusOut($event)" (input)="packageName($event)" maxlength="20">
+  <div class="counter-name">{{packageNameText}}/20 znaków</div>
 
 
   <button>Dodaj</button>

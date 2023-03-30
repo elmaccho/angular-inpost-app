@@ -7,6 +7,9 @@ header{
   border-bottom: 1px solid rgba(207, 205, 205, 0.479);
   color: #232323;
 
+  transform: translateX(200%);
+  transition: 0.5s;
+
   display: flex;
   align-items: center;
 
@@ -57,6 +60,10 @@ main{
 
   background-color: white;
 
+  transform: translateX(200%);
+  transition: 0.5s;
+
+
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -68,6 +75,7 @@ main{
     border: 2px solid rgba(207, 205, 205, 0.479);
     font-weight: 600;
     text-indent: 10px;
+    outline: none;
   }
 
   input::placeholder{
@@ -94,4 +102,8 @@ main{
     color: rgba(128, 128, 128, 0.605);
     cursor: pointer;
   }
+}
+
+.menuToggle{
+  transform: translateX(0%);
 }

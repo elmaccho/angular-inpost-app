@@ -96,4 +96,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.menuToggle {
+  transform: translateX(0%);
 }/*# sourceMappingURL=main.component.css.map */
