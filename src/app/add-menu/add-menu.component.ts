@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-// import { openAddMenu } from "../main/main.component";
+import { Component, } from '@angular/core';
+import { Orders } from './../orders';
 
 @Component({
   selector: 'app-add-menu',
@@ -10,8 +10,10 @@ export class AddMenuComponent {
 
 
 
+
   packageNumberText = '0'
   packageNameText = '0'
+  trackingNumber: any
 
   packageNumber(event: any){
     const target = event.target as HTMLInputElement
@@ -66,15 +68,33 @@ export class AddMenuComponent {
     console.log('eee');
   }
 
+  validation(event: any){
+    const target = event.target as HTMLInputElement
+    const addOrderBtn = document.querySelector('.addOrderBtn') as HTMLInputElement
 
+
+    if(event.target.value.length.toString()==24){
+      addOrderBtn.disabled = false
+    } else {
+      addOrderBtn.disabled = true
+    }
+  }
+
+  addOrder(){
+    const order: Orders = {
+      tracking_number: this.trackingNumber,
+      status: '',
+      sender: '',
+      name: ''
+    }
+
+  }
 }
 
 export function closeAddMenu(){
-
   const header = document.querySelector('.header') as HTMLElement;
   const main = document.querySelector('.main') as HTMLElement;
   header.classList.toggle('menuToggle')
   main.classList.toggle('menuToggle')
-
-  console.log('eee');
 }
+
