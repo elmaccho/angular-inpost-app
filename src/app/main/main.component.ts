@@ -2,7 +2,7 @@ import { Orders } from './../models/orders';
 import { OrdersList } from '../models/OrderList';
 
 
-import { Component, Input } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { closeAddMenu } from '../add-menu/add-menu.component';
 
 @Component({
@@ -12,14 +12,15 @@ import { closeAddMenu } from '../add-menu/add-menu.component';
 })
 export class MainComponent {
   orders: Orders[] = OrdersList;
-
-
-
+  @Output() clickButton = new EventEmitter<void>();
 
   closeMenu(){
     closeAddMenu()
   }
 
+  onNewOrder(order: Orders){
+    this.orders.unshift(order)
+  }
 
 }
 

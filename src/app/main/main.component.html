@@ -4,9 +4,10 @@
 
   </div>
 
-<ng-container *ngIf="orders.length > 0; else noOrders" >
-      <ng-container *ngFor="let orderlist of orders">
-        <div class="packageBox">
+
+<ng-container *ngIf="orders.length > 0; else noOrders">
+      <ng-container *ngFor="let orderlist of orders" >
+        <div class="packageBox" >
             <div class="packageInfo">
                 <div class="trackingNumber">
                   <p>nr przesyłki</p>
@@ -34,7 +35,7 @@
 </ng-container>
 
 
-  <button (click)="closeMenu()" class="addReceiveBtn">
+  <button (click)="closeMenu(); clickButton.emit()" class="addReceiveBtn">
     <i class="fa-solid fa-plus"></i>
   </button>
 
