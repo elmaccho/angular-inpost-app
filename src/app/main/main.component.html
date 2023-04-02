@@ -4,25 +4,25 @@
 
   </div>
 
-<ng-container *ngIf="Orderlist.length > 0; else noOrders" >
-      <ng-container *ngFor="let tracknumber of Orderlist">
+<ng-container *ngIf="orders.length > 0; else noOrders" >
+      <ng-container *ngFor="let orderlist of orders">
         <div class="packageBox">
             <div class="packageInfo">
                 <div class="trackingNumber">
                   <p>nr przesyłki</p>
                   <span>
-                    {{tracknumber.tracking_number}}
+                    {{orderlist.tracking_number}}
                   </span>
                 </div>
 
                 <div class="status">
                   <p>status</p>
-                  <span>{{tracknumber.status}}</span>
+                  <span>{{orderlist.status}}</span>
                 </div>
 
                 <div class="sender">
                   <p>nadawca</p>
-                  <span>{{tracknumber.sender}}</span>
+                  <span>{{orderlist.sender}}</span>
                 </div>
             </div>
 

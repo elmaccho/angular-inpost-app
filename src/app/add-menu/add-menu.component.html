@@ -11,13 +11,21 @@
   (input)="packageNumber($event); validation($event)"
   maxlength="24"
   minlength="0"
-  [(ngModel)]="trackingNumber"
+  
   >
     <div class="counter-number">{{packageNumberText}}/24 znaków</div>
 
 
   <h1>Możesz również nadać tej przesyłce nazwę</h1>
-  <input type="text" placeholder="Nazwa przesyłki" (focusin)="focusIn($event)" (focusout)="focusOut($event)" (input)="packageName($event)" maxlength="20">
+  <input
+  type="text"
+  placeholder="Nazwa przesyłki"
+  (focusin)="focusIn($event)"
+  (focusout)="focusOut($event)"
+  (input)="packageName($event)"
+  maxlength="20"
+
+  >
   <div class="counter-name">{{packageNameText}}/20 znaków</div>
 
 

@@ -1,5 +1,5 @@
-import { Component, } from '@angular/core';
-import { Orders } from './../orders';
+import { Component, Output , EventEmitter } from '@angular/core';
+import { Orders } from '../models/orders';
 
 @Component({
   selector: 'app-add-menu',
@@ -8,12 +8,8 @@ import { Orders } from './../orders';
 })
 export class AddMenuComponent {
 
-
-
-
   packageNumberText = '0'
   packageNameText = '0'
-  trackingNumber: any
 
   packageNumber(event: any){
     const target = event.target as HTMLInputElement
@@ -69,24 +65,21 @@ export class AddMenuComponent {
   }
 
   validation(event: any){
-    const target = event.target as HTMLInputElement
+    // const target = event.target as HTMLInputElement
     const addOrderBtn = document.querySelector('.addOrderBtn') as HTMLInputElement
 
 
-    if(event.target.value.length.toString()==24){
+    if(event.target.value.length.toString()==24 && event.target.value != ''){
       addOrderBtn.disabled = false
     } else {
       addOrderBtn.disabled = true
     }
   }
 
+
+
   addOrder(){
-    const order: Orders = {
-      tracking_number: this.trackingNumber,
-      status: '',
-      sender: '',
-      name: ''
-    }
+    const addOrderBtn = document.querySelector('.addOrderBtn') as HTMLInputElement
 
   }
 }

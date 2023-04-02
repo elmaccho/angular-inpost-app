@@ -1,5 +1,8 @@
-import { Orders } from './../orders';
-import { Component } from '@angular/core';
+import { Orders } from './../models/orders';
+import { OrdersList } from '../models/OrderList';
+
+
+import { Component, Input } from '@angular/core';
 import { closeAddMenu } from '../add-menu/add-menu.component';
 
 @Component({
@@ -8,21 +11,10 @@ import { closeAddMenu } from '../add-menu/add-menu.component';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent {
+  orders: Orders[] = OrdersList;
 
-  Orderlist: Orders[] = [
-    {
-      tracking_number: 412412412421213,
-      status: 'Wydana do doręczenia',
-      sender: 'KFD sp z. o. o',
-      name: ''
-    },
-    {
-      tracking_number: 958687521633421,
-      status: 'Odebrana od nadawcy',
-      sender: 'BioTerr sp z. o. o',
-      name: ''
-    }
-  ]
+
+
 
   closeMenu(){
     closeAddMenu()
