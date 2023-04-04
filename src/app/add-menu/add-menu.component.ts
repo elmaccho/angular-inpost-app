@@ -1,4 +1,5 @@
 import { Orders } from './../models/orders';
+import { OrdersList } from '../models/OrderList';
 
 import { Component, Output, EventEmitter } from '@angular/core';
 
@@ -13,7 +14,7 @@ export class AddMenuComponent {
   @Output() newOrder = new
   EventEmitter<Orders>
 
-
+  orders: Orders[] = OrdersList;
   order: Orders = { tracking_number: '', sender: 'Unknown', status: 'Przygotowywanie przesyłki', name: ''}
 
   packageNumberText = '0'
@@ -92,6 +93,7 @@ export class AddMenuComponent {
     closeAddMenu()
     this.order.status = 'Przygotowywanie przesyłki'
     this.order.sender = 'Unknown'
+    console.log(this.orders);
   }
 }
 

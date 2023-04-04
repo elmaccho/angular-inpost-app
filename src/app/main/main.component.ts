@@ -1,3 +1,4 @@
+
 import { Orders } from './../models/orders';
 import { OrdersList } from '../models/OrderList';
 
@@ -11,6 +12,8 @@ import { closeAddMenu } from '../add-menu/add-menu.component';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent {
+
+  order: Orders[] = []
   orders: Orders[] = OrdersList;
   @Output() clickButton = new EventEmitter<void>();
 
@@ -29,12 +32,16 @@ export class MainComponent {
     const target = event.target as HTMLInputElement
     const moreMenu = document.querySelector('.moreMenu') as HTMLInputElement
 
-    if(moreMenu?.contains(event.target)){
+    if(target.contains(event.target)){
       console.log(event.target);
       console.log('eee');
       }
   }
 
+  deleteOrder(order: Orders){
+    this.orders = this.orders.filter(e => e !== order)
+    console.log(this.orders);
+  }
 }
 
 export function openAddMenu(){
