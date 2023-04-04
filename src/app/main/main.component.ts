@@ -18,8 +18,21 @@ export class MainComponent {
     closeAddMenu()
   }
 
-  onNewOrder(order: Orders){
-    this.orders.unshift(order)
+  openMoreMenu(event: any){
+    const target = event.target as HTMLInputElement
+    event.target.nextSibling.classList.toggle('toggleMoreMenu')
+
+
+  }
+
+  onMouseOut(event: any){
+    const target = event.target as HTMLInputElement
+    const moreMenu = document.querySelector('.moreMenu') as HTMLInputElement
+
+    if(moreMenu?.contains(event.target)){
+      console.log(event.target);
+      console.log('eee');
+      }
   }
 
 }

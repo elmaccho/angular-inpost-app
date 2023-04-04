@@ -45,8 +45,12 @@
 .container .packageBox .moreBtn i {
   color: rgb(255, 217, 25);
   font-size: 15px;
+  pointer-events: none;
 }
-.container .packageBox:active {
+.container .packageBox .moreBtn p {
+  pointer-events: none;
+}
+.container .packageBox:hover {
   background-color: rgb(160, 160, 160);
 }
 .container .addReceiveBtn {
@@ -100,4 +104,35 @@
 
 .menuToggle {
   transform: translateX(0%);
+}
+
+.moreMenu {
+  width: 150px;
+  height: 80px;
+  padding: 5px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transform: scale(0);
+  transform-origin: right 50px;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+  right: -210px;
+  bottom: 50px;
+  border-radius: 15px 0 0 15px;
+}
+.moreMenu button {
+  background-color: transparent;
+  border: none;
+  margin: 5px 0;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.toggleMoreMenu {
+  transform: scale(1);
 }/*# sourceMappingURL=main.component.css.map */

@@ -9,6 +9,7 @@ import { MainComponent } from './main/main.component';
 import { AddMenuComponent } from './add-menu/add-menu.component';
 import { FormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -27,9 +27,15 @@
                 </div>
             </div>
 
-          <button class="moreBtn">
+          <button class="moreBtn"  (click)="openMoreMenu($event)">
             <p>więcej</p> <i class="fa-solid fa-arrow-right"></i>
           </button>
+
+          <div class="moreMenu" (click)="onMouseOut($event)">
+              <button #delete class="deleteBtn">Usuń</button>
+              <button #archivize class="archivizeBtn">Archiwizuj</button>
+              <button #changeName class="changeNameBtn">Zmień nazwę</button>
+          </div>
         </div>
     </ng-container>
 </ng-container>
