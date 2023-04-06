@@ -38,9 +38,14 @@ export class MainComponent {
       }
   }
 
-  deleteOrder(order: Orders){
-    this.orders = this.orders.filter(e => e !== order)
-    console.log(this.orders);
+  boxInfo(event: any){
+    const target = event.target as HTMLInputElement
+
+    console.log(event.target);
+  }
+
+  boxInfoOpen(event:any){
+    
   }
 }
 

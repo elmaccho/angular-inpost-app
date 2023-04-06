@@ -7,7 +7,7 @@
 
 <ng-container *ngIf="orders.length > 0; else noOrders">
       <ng-container *ngFor="let orderlist of orders" >
-        <div class="packageBox" >
+        <div class="packageBox" (click)="boxInfo($event)">
             <div class="packageInfo">
                 <div class="trackingNumber">
                   <p>nr przesyłki</p>
@@ -27,15 +27,10 @@
                 </div>
             </div>
 
-          <button class="moreBtn"  (click)="openMoreMenu($event)">
+          <div class="moreBtn">
             <p>więcej</p> <i class="fa-solid fa-arrow-right"></i>
-          </button>
-
-          <div class="moreMenu" (click)="onMouseOut($event)">
-              <button (click)="deleteOrder(orderlist)" class="deleteBtn">Usuń</button>
-              <button #archivize class="archivizeBtn">Archiwizuj</button>
-              <button #changeName class="changeNameBtn">Zmień nazwę</button>
           </div>
+
         </div>
     </ng-container>
 </ng-container>
@@ -52,6 +47,9 @@
       <span>Kliknij <i class="fa-solid fa-plus"></i> by dodać przesyłkę</span>
     </div>
   </ng-template>
+
+
+    <app-box-info></app-box-info>
 
 
 </div>

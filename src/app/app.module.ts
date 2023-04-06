@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
 import { AddMenuComponent } from './add-menu/add-menu.component';
 import { FormsModule } from '@angular/forms';
+import { BoxInfoComponent } from './main/box-info/box-info.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     MainComponent,
-    AddMenuComponent
+    AddMenuComponent,
+    BoxInfoComponent
   ],
   imports: [
     BrowserModule,
