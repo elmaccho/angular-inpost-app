@@ -21,13 +21,6 @@ export class MainComponent {
     closeAddMenu()
   }
 
-  openMoreMenu(event: any){
-    const target = event.target as HTMLInputElement
-    event.target.nextSibling.classList.toggle('toggleMoreMenu')
-
-
-  }
-
   onMouseOut(event: any){
     const target = event.target as HTMLInputElement
     const moreMenu = document.querySelector('.moreMenu') as HTMLInputElement
@@ -38,23 +31,16 @@ export class MainComponent {
       }
   }
 
-  boxInfo(event: any){
+  openBoxInfo(event: any){
     const target = event.target as HTMLInputElement
 
     console.log(event.target);
+    const header = document.querySelector('.boxInfoHeader') as HTMLElement;
+    const main = document.querySelector('.boxInfoMain') as HTMLElement;
+
+    header.classList.toggle('openBoxInfoToggle')
+    main.classList.toggle('openBoxInfoToggle')
+
   }
 
-  boxInfoOpen(event:any){
-    
-  }
-}
-
-export function openAddMenu(){
-  const header = document.querySelector('header') as HTMLElement;
-  const main = document.querySelector('main') as HTMLElement;
-
-  header.classList.toggle('menuToggle')
-  main.classList.toggle('menuToggle')
-
-  console.log('eee');
 }

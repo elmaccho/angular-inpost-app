@@ -107,4 +107,8 @@
 
 .menuToggle {
   transform: translateX(0%);
+}
+
+.openBoxInfoToggle {
+  transform: translateX(0%);
 }/*# sourceMappingURL=main.component.css.map */

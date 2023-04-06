@@ -1,8 +1,38 @@
-<header>
-  <button><i class="fa-solid fa-arrow-left"></i></button>
+<header class="boxInfoHeader">
+  <button (click)="closeBoxInfo($event)"><i class="fa-solid fa-arrow-left"></i></button>
   <span>Informacje o przesyłce</span>
   <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
 </header>
-<main>
+
+<main class="boxInfoMain">
+
+<ng-container>
+  <!-- <ng-container *ngFor="let orderlist of orders"> -->
+    <div class="packageInfo">
+        <div class="trackingNumber">
+          <p>nr przesyłki</p>
+          <!-- <span>{{orderlist.tracking_number}}</span> -->
+        </div>
+
+        <div class="status">
+          <p>status</p>
+          <!-- <span>{{orderlist.status}}</span> -->
+        </div>
+
+        <div class="sender">
+          <p>nadawca</p>
+          <!-- <span>{{sender}}</span> -->
+        </div>
+
+        <div class="packageName">
+          <p>Nazwa przesyłki</p>
+          <!-- <span>{{orderlist.name}}</span> -->
+        </div>
+    </div>
+    <div class="packageHistory">
+      <p>Historia przesyłki</p>
+    </div>
+  <!-- </ng-container> -->
+</ng-container>
 
 </main>

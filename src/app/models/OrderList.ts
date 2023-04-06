@@ -2,15 +2,15 @@ import { Orders } from "./orders"
 
 export const OrdersList: Orders[] = [
   {
-    tracking_number: '412412412421213',
+    tracking_number: '123456123456123456123456',
     status: 'Wydana do doręczenia',
-    sender: 'KFD sp z. o. o',
+    sender: 'aaaaaaaaaaaa',
     name: ''
   },
   {
     tracking_number: '958687521633421',
     status: 'Odebrana od nadawcy',
-    sender: 'BioTerr sp z. o. o',
+    sender: 'bbbbbbbbbbbbbb',
     name: ''
   }
 ]

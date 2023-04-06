@@ -6,8 +6,8 @@
 
 
 <ng-container *ngIf="orders.length > 0; else noOrders">
-      <ng-container *ngFor="let orderlist of orders" >
-        <div class="packageBox" (click)="boxInfo($event)">
+      <ng-container *ngFor="let orderlist of orders; let i = index">
+        <div class="packageBox" (click)="openBoxInfo($event)">
             <div class="packageInfo">
                 <div class="trackingNumber">
                   <p>nr przesyłki</p>
