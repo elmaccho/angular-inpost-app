@@ -26,4 +26,12 @@ export class BoxInfoComponent {
   sender = this.orders
   name = this.orders
 
+  menusettToggle(event:any){
+    const menusett = document.querySelector('.menusett') as HTMLInputElement
+
+    menusett.classList.toggle("toggle")
+  }
+
+  
+
 }

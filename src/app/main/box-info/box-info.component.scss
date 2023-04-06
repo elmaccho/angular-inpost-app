@@ -40,6 +40,9 @@ header{
     padding: 0 10px;
     box-sizing: border-box;
   }
+
+
+
 }
 main{
   height: 92.5vh;
@@ -128,4 +131,48 @@ main{
 }
 .openBoxInfoToggle{
   transform: translateX(0%);
+}
+.menusett{
+  width: 165px;
+  height: 130px;
+  background-color: rgb(255, 255, 255);
+  padding: 0 8px;
+
+  position: absolute;
+  top:30px;
+  right:32px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+
+  z-index: 3;
+
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  transform: scale(0);
+  transition: 0.3s;
+  transform-origin: top right;
+
+
+  button{
+    background-color: red;
+    // width: 50px;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+
+    span{
+      display: flex;
+      padding-left: 15px;
+      box-sizing: border-box;
+      width: 100px;
+    }
+  }
+}
+.toggle{
+  transform: scale(1);
 }

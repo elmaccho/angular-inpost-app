@@ -1,9 +1,18 @@
 <header class="boxInfoHeader">
   <button (click)="closeBoxInfo($event)"><i class="fa-solid fa-arrow-left"></i></button>
   <span>Informacje o przesyłce</span>
-  <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
-</header>
+  <button (click)="menusettToggle($event)"><i class="fa-solid fa-ellipsis-vertical"></i></button>
 
+
+
+
+
+</header>
+<div class="menusett">
+  <button><i class="fa-regular fa-trash-can"></i><span>Usuń</span></button>
+  <button><i class="fa-regular fa-circle-up"></i><span>Archiwizuj</span></button>
+  <button><i class="fa-solid fa-phone"></i><span>Infolinia</span></button>
+</div>
 <main class="boxInfoMain">
 
 <ng-container>
