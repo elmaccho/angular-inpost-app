@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { Orders } from 'src/app/models/orders';
-import { OrdersList } from 'src/app/models/OrderList';
 
 @Component({
   selector: 'app-box-info',
@@ -8,7 +6,6 @@ import { OrdersList } from 'src/app/models/OrderList';
   styleUrls: ['./box-info.component.scss']
 })
 export class BoxInfoComponent {
-  orders: Orders[] = OrdersList;
 
   closeBoxInfo(event: any){
     const target = event.target as HTMLInputElement
@@ -21,10 +18,6 @@ export class BoxInfoComponent {
     main.classList.toggle('openBoxInfoToggle')
   }
 
-  tracking_number = this.orders
-  status = this.orders
-  sender = this.orders
-  name = this.orders
 
   menusettToggle(event:any){
     const menusett = document.querySelector('.menusett') as HTMLInputElement
@@ -32,6 +25,6 @@ export class BoxInfoComponent {
     menusett.classList.toggle("toggle")
   }
 
-  
+
 
 }

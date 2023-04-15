@@ -1,8 +1,3 @@
-
-import { Orders } from './../models/orders';
-import { OrdersList } from '../models/OrderList';
-
-
 import { Component, Output, EventEmitter } from '@angular/core';
 import { closeAddMenu } from '../add-menu/add-menu.component';
 
@@ -12,10 +7,6 @@ import { closeAddMenu } from '../add-menu/add-menu.component';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent {
-
-  order: Orders[] = []
-  orders: Orders[] = OrdersList;
-  @Output() clickButton = new EventEmitter<void>();
 
   closeMenu(){
     closeAddMenu()

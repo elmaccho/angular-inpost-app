@@ -5,7 +5,7 @@
   </div>
 
 
-<ng-container *ngIf="orders.length > 0; else noOrders">
+<!-- <ng-container *ngIf="orders.length > 0; else noOrders">
       <ng-container *ngFor="let orderlist of orders; let i = index">
         <div class="packageBox" (click)="openBoxInfo($event)">
             <div class="packageInfo">
@@ -33,20 +33,20 @@
 
         </div>
     </ng-container>
-</ng-container>
+</ng-container> -->
 
 
   <button (click)="closeMenu(); clickButton.emit()" class="addReceiveBtn">
     <i class="fa-solid fa-plus"></i>
   </button>
 
-  <ng-template #noOrders >
+  <!-- <ng-template #noOrders >
     <div class="infoBox">
       <h1>Nie śledzisz jeszcze żadnej przesyłki</h1>
 
       <span>Kliknij <i class="fa-solid fa-plus"></i> by dodać przesyłkę</span>
     </div>
-  </ng-template>
+  </ng-template> -->
 
 
     <app-box-info></app-box-info>

@@ -1,6 +1,3 @@
-import { Orders } from './../models/orders';
-import { OrdersList } from '../models/OrderList';
-
 import { Component, Output, EventEmitter } from '@angular/core';
 
 
@@ -10,12 +7,6 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./add-menu.component.scss']
 })
 export class AddMenuComponent {
-
-  @Output() newOrder = new
-  EventEmitter<Orders>
-
-  orders: Orders[] = OrdersList;
-  order: Orders = { tracking_number: '', sender: 'Unknown', status: 'Przygotowywanie przesyłki', name: ''}
 
   packageNumberText = '0'
   packageNameText = '0'
@@ -85,15 +76,6 @@ export class AddMenuComponent {
 
   addOrder(){
     const addOrderBtn = document.querySelector('.addOrderBtn') as HTMLInputElement
-
-    this.newOrder.emit(this.order)
-    this.order = { tracking_number: '', sender: '', status: '', name: ''}
-
-    addOrderBtn.disabled = true
-    closeAddMenu()
-    this.order.status = 'Przygotowywanie przesyłki'
-    this.order.sender = 'Unknown'
-    console.log(this.orders);
   }
 }
 
